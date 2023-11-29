@@ -12,7 +12,6 @@ const TaskItem = ({ task, deleteTask, toggleTask, enterEditMode }) => {
     const date = new Date(task.id);
     const [dateCompleted, setDateCompleted] = useState(new Date());
     const duration = (dateCompleted - date);
-    const [openDeleteModal, setOpenDeleteModal] = useState(false);
 
     const handleCheckboxChange = (e) => {
         if (dateCompleted !== date || isChecked) {
@@ -81,16 +80,16 @@ const TaskItem = ({ task, deleteTask, toggleTask, enterEditMode }) => {
                     style={{ display: "none" }}
                 />
 
-                <div className='w-full p-1'>
-                    <span>
+                <div className='w-full p-1 text-xs'>
+                    <span className='sm:text-base'>
                     Created: {date.toLocaleDateString('en-US')} {date.toLocaleTimeString('en-US')}
                     </span>
                     <br />
                     {!isChecked 
                     ? 
-                    (<span className='text-green-600'>Not Done</span>) 
+                    (<span className='text-green-600 sm:text-base'>Not Done</span>) 
                     : 
-                    (<>Done: {dateCompleted.toLocaleDateString('en-US')} {dateCompleted.toLocaleTimeString('en-US')}<br /><span className='text-xs'>{diff}</span></>)}
+                    (<span className='sm:text-base'>Done: {dateCompleted.toLocaleDateString('en-US')} {dateCompleted.toLocaleTimeString('en-US')}<br /><span className='text-xs'>{diff}</span></span>)}
                 </div>
                 &nbsp;
             </span>

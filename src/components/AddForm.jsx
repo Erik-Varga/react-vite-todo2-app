@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { CiSquarePlus } from "react-icons/ci";
 
 const CustomForm = ({ addTask }) => {
-    const size = 35;
+    const size = 30;
     const [task, setTask] = useState('');
 
     const handleFormSubmit = (e) => {
@@ -41,7 +41,7 @@ const CustomForm = ({ addTask }) => {
         </div>
         <div className='flex justify-center items-center'>
             <button
-                className='flex justify-center items-center gap-2 m-2 bg-blue-500 text-white px-4 py-3 rounded hover:bg-blue-700 hover:shadow-md'
+                className='flex items-center py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700'
                 aria-label='Add Task'
                 type='submit'
             >

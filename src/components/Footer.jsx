@@ -10,7 +10,7 @@ const Footer = () => {
     const size = 25;
 
     return (
-        <div className='w-full text-sm text-center mt-5'>
+        <div className='w-full text-sm text-center mt-5 bg-white dark:text-gray-100 dark:bg-slate-900 duration-100 p-2'>
             <span>
                 <a href="https://github.com/Erik-Varga" target="_blank" rel="noreferrer">
                     <span className='flex items-center justify-center'>
@@ -23,11 +23,11 @@ const Footer = () => {
                 </a>
             </span>
             <span className='text-xs text-slate-400'>Developed using:  <strong>React &#x2022; Vite &#x2022; Tailwind CSS</strong></span>
-            <span className='flex justify-center gap-2 text-slate-400 mt-1'>
+            <div className='w-full flex justify-center gap-2 text-slate-400 mt-1'>
                 <FaReact size={size} />
                 <SiVite size={size} />
                 <TbBrandTailwind size={size} />
-            </span>
+            </div>
         </div>
     )
 }
