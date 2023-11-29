@@ -34,7 +34,7 @@ const TaskList = ({ tasks, deleteTask, toggleTask, enterEditMode }) => {
                 </span>
             
                 <span className='text-sm flex justify-center items-center'>
-                    Sort Date:&nbsp;
+                    Sort by Date:&nbsp;
                     <IoIosArrowDown
                         size={size}
                         onClick={sortZA}
