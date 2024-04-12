@@ -7,6 +7,7 @@ const EditForm = ({ editedTask, updateTask, closeEditMode }) => {
     const size = 30;
     const [updatedTaskName, setUpdatedTaskName] = useState(editedTask.name);
     // let navigate = useNavigate();
+    
 
     useEffect(() => {
         const closeModalIfEscaped = (e) => {
