@@ -14,7 +14,7 @@ const TaskItem = ({ task, deleteTask, toggleTask, enterEditMode }) => {
     const duration = (dateCompleted - date);
 
     const handleCheckboxChange = (e) => {
-        if (dateCompleted !== date || isChecked) {
+        if (dateCompleted !== date && isChecked) {
             setDateCompleted(new Date())
         }
         setIsChecked(!isChecked);
@@ -52,7 +52,7 @@ const TaskItem = ({ task, deleteTask, toggleTask, enterEditMode }) => {
       var diff = (msToTime(duration))
 
     return (
-        <li className='flex justify-between items-center pt-4 px-2 odd:bg-white odd:dark:bg-gray-900 even:bg-gray-100 even:dark:bg-gray-800 border-b dark:border-gray-700'>
+        <li className='flex justify-between items-center pt-1 px-2 odd:bg-white odd:dark:bg-gray-900 even:bg-gray-100 even:dark:bg-gray-800 border-b dark:border-gray-700'>
             <span className=''>
                 <label
                     className='flex gap-2'
